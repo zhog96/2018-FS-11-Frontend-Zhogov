@@ -1,0 +1,24 @@
+{
+  "name": "fromipack",
+  "version": "1.0.0",
+  "description": ")",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhog96/fromidorka.git"
+  },
+  "keywords": [
+    "fromy"
+  ],
+  "author": "Pupin Schneider",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhog96/fromidorka/issues"
+  },
+  "homepage": "https://github.com/zhog96/fromidorka#readme"
+}
