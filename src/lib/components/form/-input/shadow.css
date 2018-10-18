@@ -1,0 +1,21 @@
+input {
+	border: 0;
+	outline: none;
+    flex-basis: 75%;
+    height: 50%;
+    align-self: center;
+}
+
+button {
+    height: 50%;
+    align-self: center;
+}
+
+input, button {
+    font-size: 3vh;
+}
+
+:host {
+	display: inline-block;
+	border: 1px solid rgba(25, 25, 25, 0.32);
+}
