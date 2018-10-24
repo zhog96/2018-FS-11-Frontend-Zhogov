@@ -3,11 +3,13 @@ import shadowStyles from './shadow.css';
 
 const template = `
     <style>${shadowStyles.toString()}</style>
-    <input />
+    <button> File <button>
     <slot name='icon'></slot>
 `;
 
-class FormInput extends HTMLElement {
+//NOT READY)))
+
+class FormAttach extends HTMLElement {
     constructor() {
         super();
         const shadowRoot = this.attachShadow({ mode: 'open' });
@@ -18,10 +20,7 @@ class FormInput extends HTMLElement {
 
     static get observedAttributes() {
         return [
-            'name',
-            'placeholder',
-            'value',
-            'disabled',
+            'name'
         ];
     }
 
@@ -30,22 +29,13 @@ class FormInput extends HTMLElement {
     }
 
     _initElements() {
-        const hiddenInput = document.createElement('input');
-        const input = this.shadowRoot.querySelector('input');
-        this.appendChild(hiddenInput);
         this._elements = {
-            input,
-            hiddenInput,
         };
     }
 
     _addHandlers() {
-        this._elements.input.addEventListener('input', this._onInput.bind(this));
-    }
-
-    _onInput() {
-        this._elements.hiddenInput.value = this._elements.input.value;
+        //this._elements.input.addEventListener('input', this._onInput.bind(this));
     }
 }
 
-customElements.define('form-input', FormInput);
+customElements.define('form-attach', FormAttach);

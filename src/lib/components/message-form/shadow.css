@@ -1,23 +1,27 @@
 .form-input {
     display: inline-flex;
     justify-content: space-around;
-    flex-basis: 10%;
-    width: 100%;
+    flex-basis: 90%;
     background: white;
 }
 
-form {
+.main-form {
     display: flex;
-    flex-flow: column;
-    height: 100vh;
+    flex-flow: row;
+    height: 10vh;
     justify-content: space-between;
     align-items: stretch;
     background: #f0f0f0;
 }
 
-.result {
-	color: red;
-    font-size: 3vh;
+.attach {
+    flex-basis: 15%;
+    background: white;
+    font-size: 3vh
+}
+
+.fileInput {
+	display:none;
 }
 
 input[type=submit] {

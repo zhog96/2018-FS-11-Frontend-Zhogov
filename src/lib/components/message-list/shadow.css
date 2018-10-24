@@ -1,0 +1,44 @@
+.form-message {
+    display: flex;
+    flex-flow: column;
+    /*flex-basis: 100%;*/
+    width: min-content;
+    min-width: 30%;
+    max-width: 80%;
+    justify-content: space-around;
+    /*min-height: 0%;*/
+    min-height: min-content;
+    /*display: inline-block;*/
+
+    font-size: 3vh;
+    border-radius: 40px;
+    margin: 1%;
+}
+
+.form-message.right {
+    align-items: flex-end;
+    align-self: flex-end;
+    background: #f3e5f5;
+}
+
+.form-message.left {
+    align-items: flex-start;
+    align-self: flex-start;
+    background: #ffffff;
+}
+
+.main-form {
+    display: flex;
+    flex-flow: column;
+    overflow-y: auto;
+    height: 90vh;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: stretch;
+    background: #f0f0f0;
+}
+
+input[type=submit] {
+	visibility: collapse;
+}
+

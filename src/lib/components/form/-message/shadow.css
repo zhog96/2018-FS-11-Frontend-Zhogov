@@ -1,0 +1,48 @@
+p {
+    border: 0;
+    outline: none;
+    flex-basis: 90%;
+    width: 90%;
+    /*align-self: center;*/
+    font-size: 3vh;
+    word-wrap: break-word; 
+    margin: 0;
+}
+
+p.left {
+    text-align: left;
+    margin-left: 1vh;
+}
+
+p.right {
+    text-align: right;
+    margin-right: 1vh;
+}
+
+div {
+    align-self: flex-end;
+    text-align: right;
+    flex-basis: 10%;
+    width: 25%;
+    font-size: 1.5vh;
+    color: black;
+    margin-right: 1vh; 
+}
+
+canvas {
+    border: 0;
+    outline: none;
+    flex-basis: 90%;
+    height: 50vh;
+    width: 70vw;
+    align-self: center;
+    font-size: 3vh;
+    word-wrap: break-word; 
+    margin: 0;
+}
+
+
+:host {
+    display: inline-block;
+	border: 1px solid rgba(25, 25, 25, 0.32);
+}
