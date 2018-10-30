@@ -1,17 +1,12 @@
 input {
 	border: 0;
 	outline: none;
-    flex-basis: 75%;
+    flex-basis: 85%;
     height: 50%;
     align-self: center;
 }
 
-button {
-    height: 50%;
-    align-self: center;
-}
-
-input, button {
+input {
     font-size: 3vh;
 }
 
