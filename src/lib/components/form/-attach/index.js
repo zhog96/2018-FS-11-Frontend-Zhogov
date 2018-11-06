@@ -7,8 +7,6 @@ const template = `
     <slot name='icon'></slot>
 `;
 
-//NOT READY)))
-
 class FormAttach extends HTMLElement {
     constructor() {
         super();
@@ -34,7 +32,6 @@ class FormAttach extends HTMLElement {
     }
 
     _addHandlers() {
-        //this._elements.input.addEventListener('input', this._onInput.bind(this));
     }
 }
 

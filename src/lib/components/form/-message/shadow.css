@@ -19,7 +19,17 @@ p.right {
     margin-right: 1vh;
 }
 
-div {
+div.time {
+    align-self: flex-end;
+    text-align: right;
+    flex-basis: 10%;
+    width: 25%;
+    font-size: 1.5vh;
+    color: black;
+    margin-right: 1vh; 
+}
+
+div.download {
     align-self: flex-end;
     text-align: right;
     flex-basis: 10%;

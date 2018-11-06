@@ -5,7 +5,8 @@ const template = `
     <style>${shadowStyles.toString()}</style>
     <slot name="icon"></slot>
     <p>Hello</p>
-    <div class="time">10:52<\div>
+    <div class="time">10:52</div>
+    <div class="download">111</div>
 `;
 
 class FormMessage extends HTMLElement {
@@ -15,7 +16,8 @@ class FormMessage extends HTMLElement {
         shadowRoot.innerHTML = template;
         this._initElements();
         let now = new Date();
-        this.shadowRoot.querySelector('div').innerHTML = now.getHours().toString() + ':' + now.getMinutes().toString();
+        this.shadowRoot.querySelector('.time').innerHTML = now.getHours().toString() + ':' + now.getMinutes().toString();
+        this.shadowRoot.querySelector('.download').innerHTML = 'No';
     }
 
     static get observedAttributes() {
@@ -23,17 +25,21 @@ class FormMessage extends HTMLElement {
             'name',
             'value',
             'side',
+            'download',
         ];
     }
 
     attributeChangedCallback(attrName, oldVal, newVal) {
         //this._elements.input[attrName] = newVal;
+        if(this.getAttribute('download') != null) {
+            this.shadowRoot.querySelector('.download').innerHTML = this.getAttribute('download');
+        }
         if(this.getAttribute('side') != null) {
             this.className = 'form-message' + ' ' + this.getAttribute('side');
             this.shadowRoot.querySelector('p').className = this.getAttribute('side');
         } else {
             this.className = 'form-message' + ' ' + 'right';
-            this.shadowRoot.querySelector('p').className = this.getAttribute('right');
+            this.shadowRoot.querySelector('p').className = 'right';
         }
     }
 

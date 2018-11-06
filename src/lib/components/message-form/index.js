@@ -12,6 +12,7 @@ const template = `
         A
         </button>
         <input class="fileInput" type="file" multiple id="fileInput"/>
+        </div>
 	</form>
 `;
 
@@ -54,22 +55,17 @@ class MessageForm extends HTMLElement {
         this._elements.form.addEventListener('submit', this._onSubmit.bind(this));
         this._elements.form.addEventListener('keypress', this._onKeyPress.bind(this));
         this._elements.form.addEventListener('click', this._attachFiles.bind(this));
-        //this._elements.form.addEventListener('change', this._attachFiles.bind(this));
 
         this._elements.form.addEventListener('dragover', function(event) {
             event.preventDefault();
         }, false);
         this._elements.form.addEventListener('drop', this._attachFiles.bind(this), false);
-        // this._elements.inputSlot.addEventListener('slotchange', this._onSlotChange.bind(this));
     }
 
     _onSubmit(event) {
-        //this._elements.message.innerText = Array.from(this._elements.form.elements).map(
-        //    el => el.value,
-        //).join(', ');
         let val = this._elements.form_input._elements.input.value;
         if(val != '') {
-            this._elements.message_list.addMessage(event, val);
+            this._elements.message_list.addMessage(event, val, null);
             this._elements.form_input._elements.input.value = '';
         }
 
@@ -87,26 +83,26 @@ class MessageForm extends HTMLElement {
         if (event.type == 'change') {
             if(event.target.matches('#fileInput, #fileInput *')) {
                 console.log(event);
-                //I didn't find files here, I'm ready to do it later :)
             }
         }
         if (event.type == 'drop') {
             event.preventDefault();
-            this.processFiles(event.dataTransfer.files);     
+            this.processFiles(event, event.dataTransfer.files);     
         }
         if (event.target.matches('#attach, #attach *')) {
             this._elements.fileInput.click();
         }
     }
 
-    processFiles(files) {
-        //let len = files.length;
-        //for (let i = 0; i < len; i++) {
-        //    console.log("Filename: " + files[i].name);
-        //    console.log("Type: " + files[i].type);
-        //    console.log("Size: " + files[i].size + " bytes");
-        //}
-        this._elements.message_list.processFiles(files);
+    processFiles(event, files) {
+        let len = files.length;
+        for (let i = 0; i < len; i++) {
+            console.log("Filename: " + files[i].name);
+            console.log("Type: " + files[i].type);
+            console.log("Size: " + files[i].size + " bytes");
+        }
+
+        this._elements.message_list.processFiles(event, files);
     }
 }
 
