@@ -1,0 +1,19 @@
+.FormInput-input {
+	border: 0;
+	outline: none;
+    flex-basis: 85%;
+    height: 50%;
+    align-self: center;
+}
+
+.FormInput-input {
+    font-size: 3vh;
+}
+
+.FormInput {
+    display: inline-flex;
+    justify-content: space-around;
+    flex-basis: 85%;
+    background: white;
+}
+

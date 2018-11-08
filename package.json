@@ -1,63 +1,25 @@
 {
-  "name": "fromipack",
-  "version": "1.0.0",
-  "description": ")",
-  "main": "index.js",
+  "name": "fromidorka-react",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "express": "^4.16.4",
-    "express-fileupload": "^1.0.0",
-    "fs": "0.0.1-security",
-    "html-webpack-plugin": "^3.2.0",
-    "js-fs": "0.0.0",
-    "js-md5": "^0.7.3",
-    "md5": "^2.2.1",
-    "normalize.css": "^5.0.0",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.4",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.26.1",
-    "eslint": "^5.6.1",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-import-resolver-alias": "^1.1.1",
-    "eslint-import-resolver-webpack": "^0.10.1",
-    "eslint-loader": "^2.1.1",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "node-sass": "^4.9.3",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2",
-    "webpack-config": "^7.5.0"
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "react-scripts": "2.1.1"
   },
   "scripts": {
-    "build": "webpack",
-    "start": "webpack --watch",
-    "lint": "./node_modules/.bin/eslint `find src/ -iname '*.js'`",
-    "lint-fix": "./node_modules/.bin/eslint `find src/ -iname '*.js'` --fix"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zhog96/fromidorka.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "keywords": [
-    "fromy"
-  ],
-  "author": "Pupin Schneider",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zhog96/fromidorka/issues"
-  },
-  "homepage": "https://github.com/zhog96/fromidorka#readme"
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

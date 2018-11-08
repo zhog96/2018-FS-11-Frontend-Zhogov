@@ -1,0 +1,10 @@
+.MessageList {
+    display: flex;
+    flex-flow: column;
+    overflow-y: auto;
+    height: 90vh;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: stretch;
+    background: #f0f0f0;
+}
