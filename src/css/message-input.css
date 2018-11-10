@@ -1,11 +1,4 @@
-.form-input {
-    display: inline-flex;
-    justify-content: space-around;
-    flex-basis: 90%;
-    background: white;
-}
-
-.main-form {
+.MessageInput {
     display: flex;
     flex-flow: row;
     height: 10vh;
@@ -14,17 +7,13 @@
     background: #f0f0f0;
 }
 
-.attach {
+.MessageInput-attachButton {
     flex-basis: 15%;
     background: white;
     font-size: 3vh
 }
 
-.fileInput {
+.MessageInput-fileInput {
 	display:none;
-}
-
-input[type=submit] {
-	visibility: collapse;
 }
 
