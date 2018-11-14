@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../css/form-message.css'
+import '../../css/dialog/form-message.css'
 
 class FormMessage extends Component {
     constructor(props) {

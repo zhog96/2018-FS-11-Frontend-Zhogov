@@ -1,25 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import MessageList from './lib/message-list.js';
-import MessageInput from './lib/message-input.js';
+import { BrowserRouter as Router} from "react-router-dom";
+import ChatList from './lib/chats/chat-list.js';
 
-class App extends Component {  
-
-    constructor(props) {
-        super(props);
-        this.messageList = React.createRef();
-    }
-
-    handleSubmit = (content) => {
-        this.messageList.current.addMessage(content);
-    }
+class App extends Component {
+    
 
     render() {
         return (
-            <div className="App">
-                <MessageList ref={this.messageList}/>
-                <MessageInput handleSubmit={this.handleSubmit}/>
-            </div>
+            <Router>
+                <ChatList />
+            </Router>
         );
     }
 }
