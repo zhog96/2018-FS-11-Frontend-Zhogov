@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FormMessage from './form-message.js';
-import '../css/message-list.css';
+import '../../css/dialog/message-list.css';
+import { chats } from '../chats/chat-list.js';
 
 class MessageList extends Component {
 
@@ -8,9 +9,7 @@ class MessageList extends Component {
         super(props);
         
         this.state = {messages : 
-            [
-                {text : "Hello", side : "left", attachs : []}
-            ]
+            chats[this.props.id]
         };
     }
 
@@ -19,17 +18,16 @@ class MessageList extends Component {
         this.setState({
             messages : states.concat(content)
         });
-        console.log(this.state);
+        chats[this.props.id] = chats[this.props.id].concat(content);
+        console.log(chats);
     }
 
     render() {
-        const messages = this.state.messages.map(
-            (message, index) => <FormMessage content={message} key={index}/>
-        );
-
         return (
             <div className="MessageList">
-                {messages}
+                {this.state.messages.map(
+                    (message, index) => <FormMessage content={message} key={index}/>
+                )}
             </div>
         );
     }
