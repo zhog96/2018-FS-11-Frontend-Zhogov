@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import './App.css';
+
 import { BrowserRouter as Router} from "react-router-dom";
-import ChatList from './lib/chats/chat-list.js';
+import './App.css';
+
+import MessageList from './containers/dialog/messageList';
 
 class App extends Component {
-    
-
     render() {
         return (
-            <Router>
-                <ChatList />
-            </Router>
+            <div className='App'>
+                <Router>
+                    <MessageList />
+                </Router>
+            </div>
         );
     }
 }
