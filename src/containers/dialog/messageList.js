@@ -1,34 +1,31 @@
 import React, { Component } from 'react';
-//import MessageList from './message-list.js';
-//import MessageInput from './message-input.js';
-import Aux from '../../hoc/Aux.js';
 import { connect } from 'react-redux';
-import * as actionCreators from '../../store/actions/index';
+import '../../css/dialog/message-list.css';
 
-class MessageList extends Component {  
+import FormMessage from '../../components/dialog/form-message'
+
+class MessageList extends Component {
+
     render() {
         return (
-            <Aux>
-                <div>
-                </div>
-                <button>
-                </button>
-            </Aux>
+            <div className="MessageList">
+                {this.props.chats[this.props.id].chat.map(
+                    (message, index) => 
+                        <FormMessage content={message} key={index}/>
+                )}
+            </div>
         );
     }
 }
 
 const mapStateToProps = (state) => {
     return {
-        send: true,
-        payload: state.payload
-    }
+        chats: [...state.msg.chats]
+    };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onSendMessage: () =>
-            dispatch(actionCreators.sendMessage())
     }
 };
 

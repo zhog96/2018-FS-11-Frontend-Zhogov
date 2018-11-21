@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import FormInput from './form-input.js';
 import '../../css/dialog/message-input.css';
+import { connect } from 'react-redux';
+import * as actionCreators from '../../store/actions/index';
 
-/*class MessageInput extends Component {
+import FormInput from '../../components/dialog/form-input'
+
+class MessageInput extends Component {
     constructor(props) {
         super(props);
         this.fileInput = React.createRef();
@@ -10,12 +13,12 @@ import '../../css/dialog/message-input.css';
 
     handleSubmit = (text) => {
         if(text === "") return;
-        this.props.handleSubmit({text: text, side: "right", attachs: []});
+        this.props.onSendMessage({text: text, side: "right", attachs: []}, this.props.id);
     }
 
     processFiles = (attachs) => {
         if(attachs.length === 0) return;
-        this.props.handleSubmit({text: "", side: "right", attachs: attachs});
+        this.props.onSendMessage({text: "", side: "right", attachs: attachs}, this.props.id);
     }    
 
     attachFiles = () => {
@@ -33,8 +36,18 @@ import '../../css/dialog/message-input.css';
             </div>
         );
     }
-}*/
+}
 
+const mapStateToProps = (state) => {
+    return {
+    }
+};
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onSendMessage: (message, id) =>
+            dispatch(actionCreators.sendMessage(message, id))
+    }
+};
 
-export default MessageInput;
+export default connect(mapStateToProps, mapDispatchToProps)(MessageInput);
