@@ -4,7 +4,7 @@ import '../../css/dialog/form-message.css'
 class FormMessage extends Component {
     constructor(props) {
         super(props);
-
+        
         this.state = {time: new Date()};
     }
 
@@ -17,7 +17,14 @@ class FormMessage extends Component {
                     return <img className={"FormMessage-p " + this.props.content.side} key={index}       
                             src={URL.createObjectURL(file)} alt=""></img>;
                 }
-                return <a className={"FormMessage-p " + this.props.content.side} key={index} href={URL.createObjectURL(file)}>{URL.createObjectURL(file)}</a>;
+                return (
+                    <a
+                        className={"FormMessage-p " + this.props.content.side}
+                        key={index}
+                        href={URL.createObjectURL(file)}>{URL.createObjectURL(file)}
+                    </a>
+                
+                );
             }
         );
 

@@ -1,0 +1,3 @@
+export {
+    sendMessage
+} from './message';
