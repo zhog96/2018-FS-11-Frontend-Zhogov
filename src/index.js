@@ -5,14 +5,14 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 
 import messageReducer from './store/reducers/messageSend';
-import userReducer from './store/reducers/user';
+import authReducer from './store/reducers/auth';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 const rootReducer = combineReducers({
     msg: messageReducer,
-    usr: userReducer
+    auth: authReducer
 });
 
 const logger = store => {
