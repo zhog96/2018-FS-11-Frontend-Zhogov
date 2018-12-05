@@ -9,7 +9,6 @@ class FormMessage extends Component {
     }
 
     render() {
-        //const images = "";
         const imagesList = [...this.props.content.attachs];
         const images = imagesList.map(
             (file, index) => {

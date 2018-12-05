@@ -38,11 +38,6 @@ class MessageInput extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-    }
-};
-
 const mapDispatchToProps = (dispatch) => {
     return {
         onSendMessage: (message, id) =>
@@ -50,4 +45,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(MessageInput);
+export default connect(null, mapDispatchToProps)(MessageInput);
